@@ -1,20 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#123f4a"><title>Escapade · Singapore</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{color-scheme:light;--ink:#24333a;--muted:#68767a;--accent:#a4513b;--line:#ead9c8;--safe:env(safe-area-inset-bottom,0px)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--ink);font:15px/1.5 'Plus Jakarta Sans',sans-serif;background:linear-gradient(135deg,#f8e9da,#e6f0e9 34%,#f3e7d7 68%,#dce9e8);background-attachment:fixed}button{font:inherit;color:inherit;cursor:pointer}#home{min-height:100dvh;color:#fff;background:radial-gradient(ellipse at 75% 15%,#edbb8d66,transparent 35%),linear-gradient(130deg,#0a2630,#17616a 57%,#ad694a);display:flex;flex-direction:column;padding:clamp(20px,5vw,52px)}.homebar{display:flex;justify-content:space-between;align-items:center;font-weight:800}.brand{letter-spacing:.14em;text-transform:uppercase}.avatar{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f5d2a4,#a4513b);color:#29383b}.homebody{max-width:670px;margin:auto 0;padding:40px 0}.homebody small{color:#f4cba7;text-transform:uppercase;letter-spacing:.18em;font-weight:800}.homebody h1{font:700 clamp(58px,11vw,112px)/.86 'Cormorant Garamond',serif;margin:14px 0}.homebody p{color:#e5efeb;max-width:440px}.home-trip{display:inline-flex;gap:12px;align-items:center;margin:15px 0 22px;padding:12px 16px;border:1px solid #ffffff50;border-radius:15px;background:#ffffff18}.home-trip b,.home-trip small{display:block;color:white;text-transform:none;letter-spacing:0}.home-trip small{opacity:.82;font-size:12px}.cta{display:block;border:0;border-radius:99px;background:#fff;color:#2b3535;padding:13px 22px;font-weight:800;box-shadow:0 12px 30px #a4513b55}.cta:hover{transform:translateY(-2px)}#trip{display:none}.trip-hero{position:relative;overflow:hidden;padding:clamp(34px,8vw,82px) max(22px,calc((100vw - 1060px)/2));color:#fff;background:linear-gradient(115deg,#0a3039e8,#165b5ebd),radial-gradient(ellipse at 82% 15%,#edbb8d,transparent 38%),linear-gradient(135deg,#143f4b,#b36a4a);min-height:300px}.trip-hero:after{content:'✦';position:absolute;right:9%;top:-90px;font-size:300px;line-height:1;color:#fff;opacity:.08}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:800;color:#f4cba7}.trip-hero h1{position:relative;z-index:1;margin:7px 0;font:700 clamp(46px,8vw,88px)/.95 'Cormorant Garamond',serif}.trip-hero p{margin:12px 0 0;color:#e5efeb}.trip-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid #ffffff50;background:#ffffff18;border-radius:99px;padding:7px 12px;font-size:12px}main{max-width:1060px;margin:auto;padding:38px 22px calc(58px + var(--safe))}.section-title{text-align:center;margin:0 0 24px}.section-title small{color:var(--muted);text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-size:11px}.section-title h2{margin:3px 0;font:700 clamp(32px,5vw,47px)/1.1 'Cormorant Garamond',serif}.cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.day-card{position:relative;height:184px;overflow:hidden;border:2px solid #fff9;border-radius:15px;padding:0;text-align:left;color:white;background:linear-gradient(145deg,#153f49,#b36a4a);box-shadow:0 12px 25px #344c4920;transition:.2s}.day-card:hover{transform:translateY(-4px)}.day-card.active{border-color:#a4513b;box-shadow:0 0 0 2px #fff,0 12px 25px #344c4930}.day-art{position:absolute;inset:0;width:100%;height:100%;opacity:.94}.day-card:after{content:'';position:absolute;inset:25% 0 0;background:linear-gradient(transparent,rgba(10,31,34,.88))}.day-no{position:absolute;z-index:1;right:8px;top:-11px;font:700 86px/1 'Cormorant Garamond',serif;color:#fff5}.day-copy{position:absolute;z-index:2;bottom:10px;left:10px;right:8px}.day-copy b{display:block;font:700 18px/1.05 'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.07em}.day-copy small{display:block;font-size:10px;opacity:.88;margin-top:4px}.day-copy .status{font-size:9px;opacity:.72}.day-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:42px 0 10px}.day-heading h3{margin:0;font:700 clamp(46px,8vw,70px)/.9 'Cormorant Garamond',serif;text-transform:uppercase}.date,.progress-label{color:var(--muted);font-size:13px}.progress{height:5px;border-radius:9px;background:#d8d6c9;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#bd6845,#e4ae72,#4d8c7c)}ul{list-style:none;padding:0;margin:20px 0 0}li{display:grid;grid-template-columns:112px 1fr;gap:14px;margin:0 0 12px;align-items:start}.time{padding-top:15px;text-align:right;color:var(--accent);font-weight:800;font-size:12px}.item{display:flex;gap:12px;align-items:flex-start;padding:15px 16px;border:1px solid #ead9c8;border-radius:14px;background:linear-gradient(115deg,#fffaf4ed,#fff4e8e8);box-shadow:0 8px 22px #594d3b0d}.item-body{flex:1;min-width:0}.item-name{font-weight:800}.note{white-space:pre-line;color:var(--muted);font-size:13px;margin-top:3px}.tick{flex:none;width:27px;height:27px;border:2px solid #b76447;border-radius:50%;background:transparent;color:transparent}.done .tick{background:#a4513b;color:white}.done .item{opacity:.55}.done .item-name{text-decoration:line-through}.remove{display:block;border:0;background:none;color:var(--muted);text-decoration:underline;padding:4px 0 0;font-size:11px}.add{width:100%;border:1.5px dashed #bb8065;border-radius:13px;padding:13px;background:#fff9;color:#904b37;font-weight:800}.add:hover{background:#fff}.form{display:grid;grid-template-columns:120px 1fr;gap:9px;margin-top:9px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff9}.form input,.form textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:#fffdf9;font:inherit}.wide,.actions{grid-column:1/-1}.actions{display:flex;justify-content:flex-end;gap:8px}.actions button{padding:9px 15px;border:0;border-radius:9px;font-weight:700}.save{background:#a4513b;color:#fff}.cancel{background:#eee5d9}.empty{padding:24px;text-align:center;border:1px dashed #cdb9a5;border-radius:14px;color:var(--muted);margin-top:15px}.foot{text-align:center;color:var(--muted);font-size:11px;padding:28px 12px}.map{display:inline-block;margin-top:7px;color:#28655e;font-size:12px;font-weight:700;text-decoration:none}@media(max-width:850px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:520px){.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.day-card{height:155px}.day-no{font-size:74px}.day-copy{left:8px;bottom:8px}.day-copy b{font-size:16px}.day-heading{margin-top:32px}li{grid-template-columns:1fr;gap:3px}.time{text-align:left;padding:0 4px}.form{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Escapade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #0d4d57;
+      --bg-2: #0b6971;
+      --bg-3: #79a2a0;
+      --bg-4: #d5a17c;
+      --text: #f5f4f2;
+      --muted: rgba(255,255,255,0.8);
+      --panel: rgba(255,255,255,0.12);
+      --panel-strong: rgba(255,255,255,0.16);
+      --line: rgba(255,255,255,0.18);
+      --ink: #2d3131;
+      --paper: #f5efe6;
+      --paper-2: #e4d9cb;
+      --accent: #c68765;
+      --card-line: #d8cbbc;
+      --shadow: rgba(9, 39, 44, 0.15);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "Plus Jakarta Sans", Arial, sans-serif;
+      background: #e8dfd6;
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 52px 36px 52px;
+      background: linear-gradient(90deg,
+        var(--bg-1) 0%,
+        #0b5d66 20%,
+        #0e6970 36%,
+        #7ea8a3 62%,
+        var(--bg-4) 100%);
+      overflow: hidden;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      letter-spacing: 0.3em;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #f4efe8;
+    }
+
+    .brand .mark {
+      font-size: 18px;
+      line-height: 1;
+      opacity: 0.9;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #e7c6a6, #c68562);
+      color: #1a2f31;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 10px 25px rgba(118, 88, 64, 0.18);
+    }
+
+    .home-inner {
+      margin-top: auto;
+      margin-bottom: auto;
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      padding-left: 10px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #f0dcc7;
+    }
+
+    .headline {
+      margin: 10px 0 14px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(5.4rem, 11vw, 13rem);
+      font-weight: 700;
+      line-height: 0.82;
+      letter-spacing: -0.05em;
+      color: white;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: clamp(1.1rem, 2vw, 2rem);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .lead strong {
+      color: #f8f8f8;
+      font-weight: 700;
+    }
+
+    .trip-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 420px;
+      margin-top: 42px;
+      padding: 16px 18px 16px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 14px 28px rgba(7, 35, 40, 0.08);
+    }
+
+    .trip-flag {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      font-weight: 700;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .trip-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .trip-meta b {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .trip-meta small {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.98rem;
+    }
+
+    .cta {
+      margin-top: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 260px;
+      height: 62px;
+      border: 0;
+      border-radius: 999px;
+      background: #fff;
+      color: #18373e;
+      font-size: clamp(1.1rem, 1.7vw, 2rem);
+      font-weight: 700;
+      box-shadow: 0 18px 36px rgba(8, 33, 39, 0.18);
+      transition: transform 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+    }
+
+    .cta .arrow {
+      margin-left: 10px;
+      font-size: 1.5em;
+      line-height: 1;
+    }
+
+    #trip {
+      display: none;
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    body.trip #home { display: none; }
+    body.trip #trip { display: block; }
+
+    .trip-shell {
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .trip-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 290px;
+      padding: 48px 56px 28px;
+      background: linear-gradient(120deg, #123b45 0%, #1d6371 38%, #9b7d66 100%);
+    }
+
+    .trip-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 15%, rgba(255,255,255,0.18), transparent 30%);
+    }
+
+    .trip-hero * { position: relative; z-index: 1; }
+
+    .trip-hero .eyebrow {
+      margin: 0;
+      color: #f0d8b5;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+    }
+
+    .trip-hero h1 {
+      margin: 14px 0 12px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      color: white;
+    }
+
+    .trip-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .trip-pills .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.10);
+      color: white;
+      font-size: 12px;
+    }
+
+    .trip-main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 34px 20px 72px;
+    }
+
+    .trip-title {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .trip-title small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #73675d;
+      font-weight: 700;
+    }
+
+    .trip-title h2 {
+      margin: 8px 0 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      color: #312b2b;
+      letter-spacing: -0.04em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .day-card {
+      position: relative;
+      height: 180px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.45);
+      background: linear-gradient(135deg, #3f4c52, #a05d42);
+      box-shadow: 0 12px 20px rgba(24, 29, 32, 0.06);
+    }
+
+    .day-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,31,36,0.08), rgba(14,24,27,0.72));
+    }
+
+    .day-card .art {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #4a4c48, #b98d67);
+      opacity: 0.9;
+    }
+
+    .day-card:nth-child(1) .art { background: linear-gradient(135deg, rgba(25,41,42,0.75), rgba(134,148,148,0.5)); }
+    .day-card:nth-child(2) .art { background: linear-gradient(135deg, rgba(63,49,54,0.55), rgba(175,122,93,0.7)); }
+    .day-card:nth-child(3) .art { background: linear-gradient(135deg, rgba(71,64,52,0.72), rgba(130,171,150,0.5)); }
+    .day-card:nth-child(4) .art { background: linear-gradient(135deg, rgba(74,84,69,0.72), rgba(161,125,93,0.5)); }
+    .day-card:nth-child(5) .art { background: linear-gradient(135deg, rgba(85,65,52,0.7), rgba(165,125,92,0.52)); }
+    .day-card:nth-child(6) .art { background: linear-gradient(135deg, rgba(86,80,72,0.74), rgba(169,138,120,0.46)); }
+
+    .day-card .num {
+      position: absolute;
+      top: -8px;
+      right: 12px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 90px;
+      font-weight: 700;
+      letter-spacing: -0.08em;
+      color: rgba(255,255,255,0.28);
+      line-height: 1;
+      z-index: 1;
+    }
+
+    .day-card .label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 12px;
+      z-index: 1;
+      color: white;
+    }
+
+    .day-card .label b {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .day-card .label small {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .day-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .day-header h3 {
+      margin: 0;
+      font-family: "Cormorand Garamond", Georgia, serif;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+      color: #2d2a2a;
+    }
+
+    .day-header .meta {
+      color: #6d6662;
+      font-size: 13px;
+    }
+
+    .progress {
+      height: 5px;
+      border-radius: 999px;
+      background: #d9d0c4;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .progress span {
+      display: block;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(90deg, #cb8a66, #d9ae7a, #628b83);
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .time {
+      padding-top: 16px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      text-align: right;
+    }
+
+    .entry {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--card-line);
+      background: rgba(255,255,255,0.35);
+      box-shadow: 0 8px 18px rgba(90, 71, 49, 0.04);
+    }
+
+    .check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #b86f50;
+      background: transparent;
+      margin-top: 2px;
+      flex: none;
+    }
+
+    .entry-body {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .entry-body strong {
+      display: block;
+      font-size: 14px;
+      color: #1d2526;
+      font-weight: 700;
+    }
+
+    .entry-body p {
+      margin: 4px 0 0;
+      color: #66605b;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .trip-box { min-width: 0; }
+      #home { padding: 22px 26px 26px; }
+    }
+
+    @media (max-width: 620px) {
+      #home { padding: 18px 18px 30px; }
+      .brand { letter-spacing: 0.18em; font-size: 13px; }
+      .headline { font-size: 5rem; }
+      .trip-box { min-width: 0; width: 100%; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .item { grid-template-columns: 1fr; }
+      .time { text-align: left; padding-top: 0; }
+      .cta { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-<section id="home"><header class="homebar"><div class="brand">✦ Escapade</div><div class="avatar">SR</div></header><div class="homebody"><small>Welcome to</small><h1>Escapade</h1><p>Hi, SR! See your planned itinerary trip.</p><div class="home-trip"><span style="font-size:28px">🇸🇬</span><div><b>Your next trip is Singapore</b><small>26 Nov – 1 Dec 2026</small></div></div><button class="cta" id="open">Escape now&nbsp; →</button></div></section>
-<div id="trip"><header class="trip-hero"><div class="eyebrow">A little getaway · 2026</div><h1>Escapade to<br>Singapore</h1><p>Six days of city lights, gardens and little discoveries.</p><div class="trip-meta"><span class="pill">🇸🇬 &nbsp;26 Nov – 1 Dec 2026</span><span class="pill">✈️ &nbsp;Surabaya ↔ Singapore</span><span class="pill">♡ &nbsp;A trip for two</span></div></header><main><div class="section-title"><small>Your itinerary</small><h2>Day by day in Singapore</h2></div><div class="cards" id="cards"></div><section id="details"></section></main><footer class="foot">Escapade · Singapore, November 2026 · Your changes are saved in this browser</footer></div>
-<script>
-const DAYS=[['Thu','26 Nov','Thursday, 26 November'],['Fri','27 Nov','Friday, 27 November'],['Sat','28 Nov','Saturday, 28 November'],['Sun','29 Nov','Sunday, 29 November'],['Mon','30 Nov','Monday, 30 November'],['Tue','1 Dec','Tuesday, 1 December']];const KEY='sg-itinerary-v1';let data={},current=0,adding=false;try{data=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){}const seed={day0:[{time:'Before flight',name:'Download MyICA Mobile',note:'Download the app before you fly.',nomap:true},{time:'16:30',name:'Flight SQ-927 · Surabaya (SUB T2) → Singapore (SIN)',note:'Departs 16:30, lands 19:55 (Singapore time).',nomap:true},{time:'After landing',name:'Fill in SG Arrival Card (MyICA)',note:'Foreign Visitor → SG Arrival Card → Individual submission → scan passport.',nomap:true},{time:'After landing',name:'Jewel Changi',note:'From T2, find the Skytrain to T1 & T3 → Cafe O → turn right, go straight → Skytrain to Terminal 3.'},{time:'Night',name:'Changi Airport → V Hotel Lavender',note:'MRT to Tanah Merah, then change to the East-West line towards Tuas Link.'}],day5:[{time:'12:00+',name:'Solace Studios · free boarding-pass photobooth',note:'Jewel Changi Airport, Level 4, Unit #04-239.'},{time:'16:40',name:'Flight SQ-928 · Singapore (SIN T2) → Surabaya (SUB T2)',note:'Departs 16:40, lands 17:55 (Surabaya time).',nomap:true}]};if(!data.__seeded){Object.keys(seed).forEach(k=>data[k]=[...(data[k]||[]),...seed[k]]);data.__seeded=3;store()}else if(data.__seeded<3){Object.keys(seed).forEach(k=>{data[k]=data[k]||[];if(k==='day5'&&!data[k].some(x=>(x.name||'').includes('Solace Studios')))data[k].unshift(seed[k][0]);if(k==='day0'&&!data[k].some(x=>(x.name||'').includes('Flight SQ-927')))data[k].splice(Math.min(1,data[k].length),0,seed[k][1])});data.__seeded=3;store()}function store(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}}function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function artwork(k){const skies=['#e6b781','#d78967','#eece9c','#92b69e','#d2a980','#87aeba'],deep=['#214b55','#274854','#8b5945','#305c53','#456a70','#254a59'];let s='';if(k===0)s='<path d="M0 114Q85 20 180 112v68H0Z" fill="#d5a878"/><path d="m52 91 58-20 23 5-33 10 29 7-5 8-34-7-25 16-6-4 14-17-22 8z" fill="#fff7e8"/><circle cx="145" cy="37" r="18" fill="#ffe6aa"/>';if(k===1)s='<path d="M0 155h180v25H0z" fill="#244d58"/><path d="M48 145V72l15-9 15 9v73m5 0V54l17-12 17 12v91m8 0V72l15-9 15 9v73" fill="#f0d7b1"/><path d="M36 72h112l-8-12H44z" fill="#c5835b"/><path d="M10 150q8-46 17 0m-9-23 9-11m30 34q8-46 17 0m-9-23 9-11m66 34q8-46 17 0m-9-23 9-11" fill="none" stroke="#d7b27f" stroke-width="5"/>';if(k===2)s='<path d="M0 145h180v35H0z" fill="#7d4d3e"/><path d="M20 145V85h140v60M20 105h140M45 85V68h90v17" fill="none" stroke="#f2dfc0" stroke-width="8"/><path d="M74 145v-30a16 16 0 0 1 32 0v30" fill="#d6a778"/><circle cx="90" cy="47" r="17" fill="#ffe4a8"/><path d="M0 150q25-24 50 0m80 0q25-24 50 0" fill="none" stroke="#60816a" stroke-width="9"/>';if(k===3)s='<path d="M0 154h180v26H0z" fill="#315650"/><path d="m48 150 12-82 14 82m34 0 13-98 15 98" stroke="#664f3e" stroke-width="8"/><path d="M24 80q36-44 72 0-36 17-72 0m55-15q36-44 72 0-36 17-72 0m-7 54q44-43 88 0-44 19-88 0" fill="#77a47a"/><circle cx="151" cy="39" r="17" fill="#ffe1a0"/>';if(k===4)s='<path d="M0 150q44-58 90 0 44-58 90 0v30H0z" fill="#597765"/><path d="M0 126Q45 57 90 126t90 0" fill="none" stroke="#f2d8ab" stroke-width="8"/><path d="M20 145V85h140v60M20 101h140" fill="none" stroke="#d3b387" stroke-width="5"/><circle cx="90" cy="45" r="17" fill="#fff0c1"/>';if(k===5)s='<path d="M0 130q45-30 90 0t90 0v50H0z" fill="#24525d"/><path d="M30 127h120v28H30z" fill="#e3c89e"/><path d="m43 126 8-57h78l8 57" fill="#eedbb9"/><path d="m72 69 19-17 19 17" fill="#b97855"/><path d="M54 91h66M54 105h66" stroke="#a77b5d" stroke-width="4"/><path d="m22 44 55 19-28 4 25 14-5 7-31-16-18 9-4-5 12-14-14-11z" fill="#fff7e9"/>';return `<svg class="day-art" viewBox="0 0 180 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="sky${k}" x2="0" y2="1"><stop stop-color="${skies[k]}"/><stop offset="1" stop-color="${deep[k]}"/></linearGradient></defs><rect width="180" height="180" fill="url(#sky${k})"/>${s}</svg>`}
-function render(){const cards=document.getElementById('cards');cards.innerHTML='';DAYS.forEach((d,k)=>{const a=data['day'+k]||[],done=a.filter(x=>x.done).length,b=document.createElement('button');b.className='day-card'+(k===current?' active':'');b.innerHTML=artwork(k)+`<span class="day-no">${k+1}</span><span class="day-copy"><b>Day ${k+1}</b><small>${d[0]}, ${d[1]}</small><small class="status">${a.length?(done===a.length?'all done ✓':done+'/'+a.length+' done'):'no plans yet'}</small></span>`;b.onclick=()=>{current=k;adding=false;render();document.getElementById('detail').scrollIntoView({behavior:'smooth',block:'start'})};cards.appendChild(b)});const root=document.getElementById('details'),items=data['day'+current]||[],d=DAYS[current],done=items.filter(x=>x.done).length;root.innerHTML=`<div id="detail" class="day-heading"><div><h3>Day ${current+1}</h3><span class="date">${d[2]} 2026</span></div><div class="progress-label">${done} of ${items.length} done</div></div><div class="progress"><i style="width:${items.length?Math.round(done/items.length*100):0}%"></i></div>`;if(!items.length)root.insertAdjacentHTML('beforeend','<div class="empty">No places planned yet. Add your first stop below.</div>');else{const ul=document.createElement('ul');items.forEach((it,i)=>{const li=document.createElement('li');li.className=it.done?'done':'';li.innerHTML=`<div class="time">${esc(it.time)}</div><div class="item"><button class="tick" aria-label="Toggle complete">✓</button><div class="item-body"><div class="item-name">${esc(it.name)}</div>${it.note?`<div class="note">${esc(it.note)}</div>`:''}${!it.nomap?`<a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.name+' Singapore')}">📍 Open in Maps</a>`:''}${it.done?'<button class="remove">remove</button>':''}</div></div>`;li.querySelector('.tick').onclick=()=>{it.done=!it.done;store();render()};const rm=li.querySelector('.remove');if(rm)rm.onclick=()=>{items.splice(i,1);data['day'+current]=items;store();render()};ul.appendChild(li)});root.appendChild(ul)}if(!adding){const b=document.createElement('button');b.className='add';b.textContent='+ Add a place';b.onclick=()=>{adding=true;render()};root.appendChild(b)}else{const f=document.createElement('form');f.className='form';f.innerHTML='<input name="time" placeholder="Time"><input name="name" placeholder="Place name" required><textarea class="wide" name="note" rows="2" placeholder="Notes (optional)"></textarea><div class="actions"><button type="button" class="cancel">Cancel</button><button class="save">Add to itinerary</button></div>';f.querySelector('.cancel').onclick=()=>{adding=false;render()};f.onsubmit=e=>{e.preventDefault();const fd=new FormData(f),list=data['day'+current]||[];list.push({time:fd.get('time'),name:fd.get('name').trim(),note:fd.get('note').trim()});data['day'+current]=list;store();adding=false;render()};root.appendChild(f)}}
-function route(){const trip=location.hash==='#sr-singapore-nov26';document.getElementById('home').style.display=trip?'none':'flex';document.getElementById('trip').style.display=trip?'block':'none';if(trip){render();window.scrollTo(0,0)}}document.getElementById('open').onclick=()=>{location.hash='sr-singapore-nov26'};window.addEventListener('hashchange',route);route();
-</script>
+  <section id="home">
+    <div class="brand-row">
+      <div class="brand"><span class="mark">✦</span> Escapade</div>
+      <div class="avatar">SR</div>
+    </div>
+
+    <div class="home-inner">
+      <p class="eyebrow">Welcome to</p>
+      <h1 class="headline">Escapade</h1>
+      <p class="lead">Hi, SR! <strong>See your planned itinerary trip.</strong></p>
+
+      <div class="trip-box">
+        <div class="trip-flag">SG</div>
+        <div class="trip-meta">
+          <b>Your next trip is Singapore</b>
+          <small>26 Nov – 1 Dec 2026</small>
+        </div>
+      </div>
+
+      <button class="cta" id="open">Escape now <span class="arrow">→</span></button>
+    </div>
+  </section>
+
+  <div id="trip">
+    <div class="trip-shell">
+      <header class="trip-hero">
+        <div class="eyebrow">A little getaway · 2026</div>
+        <h1>Escapade<br>to<br>Singapore</h1>
+        <div class="trip-pills">
+          <span class="pill">🇸🇬 26 Nov – 1 Dec 2026</span>
+          <span class="pill">✈️ Surabaya ↔ Singapore</span>
+          <span class="pill">♡ A trip for two</span>
+        </div>
+      </header>
+
+      <main class="trip-main">
+        <div class="trip-title">
+          <small>Your itinerary</small>
+          <h2>Day by day in Singapore</h2>
+        </div>
+
+        <div class="cards">
+          <div class="day-card"><div class="art"></div><div class="num">1</div><div class="label"><b>Day 1</b><small>Thu, 26 Nov</small></div></div>
+          <div class="day-card"><div class="art"></div><div class="num">2</div><div class="label"><b>Day 2</b><small>Fri, 27 Nov</small></div></div>
+          <div class="day-card"><div class="art"></div><div class="num">3</div><div class="label"><b>Day 3</b><small>Sat, 28 Nov</small></div></div>
+          <div class="day-card"><div class="art"></div><div class="num">4</div><div class="label"><b>Day 4</b><small>Sun, 29 Nov</small></div></div>
+          <div class="day-card"><div class="art"></div><div class="num">5</div><div class="label"><b>Day 5</b><small>Mon, 30 Nov</small></div></div>
+          <div class="day-card"><div class="art"></div><div class="num">6</div><div class="label"><b>Day 6</b><small>Tue, 1 Dec</small></div></div>
+        </div>
+
+        <div class="day-header">
+          <h3>Day 1</h3>
+          <div class="meta">Thursday, 26 November 2026</div>
+        </div>
+
+        <div class="progress"><span></span></div>
+
+        <ul class="list">
+          <li class="item">
+            <div class="time">Before flight</div>
+            <div class="entry">
+              <div class="check"></div>
+              <div class="entry-body">
+                <strong>Download MyICA Mobile</strong>
+                <p>Download the app before you fly.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <div class="time">16:30</div>
+            <div class="entry">
+              <div class="check"></div>
+              <div class="entry-body">
+                <strong>Flight SQ-927 · Surabaya (SUB T2) → Singapore (SIN)</strong>
+                <p>Departs 16:30, lands 19:55 (Singapore time).</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <div class="time">After landing</div>
+            <div class="entry">
+              <div class="check"></div>
+              <div class="entry-body">
+                <strong>Fill in SG Arrival Card (MyICA)</strong>
+                <p>Foreign Visitor → SG Arrival Card → Individual submission — scan passport.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <div class="time">After landing</div>
+            <div class="entry">
+              <div class="check"></div>
+              <div class="entry-body">
+                <strong>Jewel Changi</strong>
+                <p>From T2, find the Skytrain to T1 &amp; T3 → Cafe O → turn right, go straight → Skytrain to Terminal 3.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const open = document.getElementById('open');
+    open.addEventListener('click', function () {
+      document.body.classList.add('trip');
+    });
+  </script>
 </body>
 </html>
